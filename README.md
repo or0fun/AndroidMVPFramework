@@ -10,7 +10,7 @@
 
 #### 1 整体基于MVP架构进行了针对弱网加载的优化，总体结构图如下：
 
-![结构图](https://github.com/or0fun/AndroidMVPFramework/blob/master/%E5%BC%B1%E7%BD%91%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84%E5%9B%BE.png?raw=true)
+![结构图](https://raw.githubusercontent.com/or0fun/AndroidMVPFramework/master/%E5%BC%B1%E7%BD%91%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84%E5%9B%BE.png)
 
 
 ### Activity
