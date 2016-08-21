@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<template
+    format="2"
+    revision="2"
+    name="MVP Fragment"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a new MVP fragment">
+
+    <category value="AAShowJoyMVP" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="TestFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${classToResource(activityClass)}_fragment"
+        default="test_fragment"
+        help="The name of the layout to create for the fragment" />
+
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.showjoy.shop" />
+
+    <parameter
+        id="viewModelClass"
+        name="View Model Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="TestViewModel"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}ViewModel"
+        help="The name of the ViewModel to create" />
+
+    <parameter
+        id="presenterClass"
+        name="Presenter Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="TestPresenter"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Presenter"
+        help="The name of the Presenter to create" />
+
+    <parameter
+        id="requestClass"
+        name="Request Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="TestRequest"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Request"
+        help="The name of the Request to create" />
+
+    <parameter
+        id="entityClass"
+        name="Entity Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="TestEntity"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Entity"
+        help="The name of the Entity to create" />
+       
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>  
